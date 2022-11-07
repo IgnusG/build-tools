@@ -3,6 +3,7 @@
 		"dbaeumer.vscode-eslint",
 		"esbenp.prettier-vscode",
 		"arcanis.vscode-zipfs",
-		"prisma.prisma"
+		"prisma.prisma",
+		"editorconfig.editorconfig"
 	]
 }

@@ -11,7 +11,7 @@ jobs:
     name: Version
     runs-on: ubuntu-latest
     outputs:
-      trigger-publish: ${{ steps.changesets.outputs.published == 'true' }}
+      trigger-publish: ${{ steps.changesets.outputs.pullRequestNumber == null }}
     strategy:
       matrix:
         node-version: [17.8.0]
@@ -21,11 +21,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn install
-      - uses: changesets/action@2a025e8ab1cfa4312c2868cb6aa3cd3b473b84bf # ratchet:changesets/action@v1
+      - uses: changesets/action@5f3b898718761af42fe162af3258e4145d07be24 # ratchet:changesets/action@v1
         id: changesets
         with:
-          createGithubReleases: false
-          publish: "echo New tag: example@package" # Trigger publish
           version: yarn change:version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

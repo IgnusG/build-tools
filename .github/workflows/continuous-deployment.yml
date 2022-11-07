@@ -28,7 +28,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: echo '::set-output name=packages::{"include":${{ steps.changesets.outputs.publishedPackages }}}'
+      - run: echo 'packages={"include":${{ steps.changesets.outputs.publishedPackages }}}' >> $GITHUB_OUTPUT
         id: package-matrix
   deployment-status:
     name: Update Deployment Statuses

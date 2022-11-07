@@ -14,3 +14,9 @@ Thanks for your interest! Just a few more steps to follow and we can get your lo
 
 > This repo already comes with all dependencies and tools using a PnP (Plug-and-Play) zero install architecture
 > TypeScript dependencies are kept in .yarn/cache and tool executables are inside of .tools (bundled as pre-packaged apps)
+
+### Release
+
+1. Run `yarn change:create` for every meaningful change (such as a new feature or bugfix) - an easy way to think about it is that each change will be a separate change line in the CHANGELOG
+2. A CI script automatically collects your changes and opens a PR creating a new release
+3. Once the release is merged another script automatically publishes the new version

@@ -2,8 +2,17 @@
 	"name": "@ignsg/vite-build-tools",
 	"version": "0.0.0",
 	"type": "module",
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"dist",
+		"src"
+	],
 	"scripts": {
-		"build": "rm -rf dist && yarn vite build"
+		"build": "rm -rf dist && yarn vite build",
+		"test": "vitest",
+		"test:related": "vitest related --run"
 	},
 	"#exports": "Generated automatically by @ignsg/vite-build-tools",
 	"exports": {

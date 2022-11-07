@@ -4,6 +4,7 @@ import * as path from "node:path";
 import { BuildOptions, LibraryFormats, Plugin, UserConfig } from "vite";
 
 import { Entry, EntryOptions, PackageJsonExports, PluginOptions } from "./types.js";
+import { getPackageJSONPath } from "./utilities.js";
 
 export type { PluginOptions };
 
@@ -102,14 +103,14 @@ function createMapFormatToOutputOptions(
 }
 
 export default async function entriesPlugin(opts: PluginOptions): Promise<Plugin> {
-	const packageDetails = JSON.parse(fs.readFileSync("./package.json").toString());
-
 	let config: UserConfig;
 	let entries: Map<string, Entry>;
 
 	return {
 		name: "vite:entries",
 		config(userConfig) {
+			const packageDetails = JSON.parse(fs.readFileSync(getPackageJSONPath(userConfig)).toString());
+
 			const isEsModule = packageDetails.type === "module";
 
 			userConfig.build ??= {};
@@ -152,6 +153,8 @@ export default async function entriesPlugin(opts: PluginOptions): Promise<Plugin
 		},
 
 		closeBundle() {
+			const packageDetails = JSON.parse(fs.readFileSync(getPackageJSONPath(config)).toString());
+
 			const { dependencies, peerDependencies, devDependencies, ...restPackageDetails } =
 				packageDetails;
 
@@ -167,7 +170,7 @@ export default async function entriesPlugin(opts: PluginOptions): Promise<Plugin
 			);
 
 			fs.writeFileSync(
-				"./package.json",
+				getPackageJSONPath(config),
 				JSON.stringify(
 					{
 						...restPackageDetails,

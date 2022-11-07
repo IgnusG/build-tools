@@ -27,5 +27,9 @@ export default defineConfig(async () => {
 				external: [/node:.*/],
 			},
 		},
+		test: {
+			threads: false,
+			watchExclude: ["end-2-end/fixtures"],
+		},
 	};
 });

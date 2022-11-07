@@ -4,6 +4,7 @@ import * as path from "node:path";
 import { Plugin, UserConfig } from "vite";
 
 import { Entry, PackageJsonExports, PluginOptions } from "./types.js";
+import { getPackageJSONPath } from "./utilities.js";
 import { reduceEntryOptionsToEntries } from "./vite-plugin-entries.js";
 
 export type { PluginOptions };
@@ -100,7 +101,7 @@ export default async function dtsPlugin(opts: PluginOptions): Promise<Plugin> {
 		},
 
 		closeBundle() {
-			const packageDetails = JSON.parse(fs.readFileSync("./package.json").toString());
+			const packageDetails = JSON.parse(fs.readFileSync(getPackageJSONPath(config)).toString());
 			const entryTypeExports = new Map(
 				Object.entries(
 					Array.from(entries.values()).reduce(
@@ -116,7 +117,7 @@ export default async function dtsPlugin(opts: PluginOptions): Promise<Plugin> {
 				Object.entries(packageDetails.exports as PackageJsonExports),
 			).reduce(createReduceExistingExportsEntriesToTypedPackageExports(entryTypeExports), {});
 
-			fs.writeFileSync("./package.json", JSON.stringify(packageDetails, undefined, 4));
+			fs.writeFileSync(getPackageJSONPath(config), JSON.stringify(packageDetails, undefined, 4));
 		},
 	};
 }

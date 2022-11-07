@@ -6,7 +6,15 @@
 		"node": "19.0.0"
 	},
 	"scripts": {
-		"prepare-local": "./prepare.ts"
+		"prepare-local": "./prepare.ts",
+		"each": "yarn workspaces foreach --verbose --parallel run",
+		"each:dev": "yarn workspaces foreach --verbose --parallel --interlaced run",
+		"format": "prettier -w . && eslint --fix .",
+		"lint": "python ./.tools/pre-commit.pyz run",
+		"check-dependencies": "yarn install --check-cache",
+		"change:create": "changeset",
+		"change:version": "changeset version",
+		"change:publish": "yarn each build && changeset publish"
 	},
 	"packageManager": "yarn@4.0.0-rc.27",
 	"workspaces": [

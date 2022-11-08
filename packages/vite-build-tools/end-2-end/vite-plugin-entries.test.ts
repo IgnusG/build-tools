@@ -167,6 +167,9 @@ describe("vite-plugin-entries", () => {
 			plugins: [entriesPlugin(buildConfig)],
 		});
 
+		expect(readFile("fixtures/dist/nestedFolder/helloWorld.es.js")).toMatchSnapshot();
+		expect(readFile("fixtures/dist/cjs/nestedFolder/helloWorld.cjs.js")).toMatchSnapshot();
+
 		expect(JSON.parse(readFile("fixtures/package.json"))).toEqual(
 			expect.objectContaining({
 				exports: {

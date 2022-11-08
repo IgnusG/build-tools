@@ -55,3 +55,19 @@ export {
 };
 "
 `;
+
+exports[`vite-plugin-entries > supports modifying output and exports paths 1`] = `
+"const greeting = \\"Hello World!\\";
+export {
+  greeting
+};
+"
+`;
+
+exports[`vite-plugin-entries > supports modifying output and exports paths 2`] = `
+"\\"use strict\\";
+Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: \\"Module\\" } });
+const greeting = \\"Hello World!\\";
+exports.greeting = greeting;
+"
+`;

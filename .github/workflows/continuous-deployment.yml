@@ -24,7 +24,7 @@ jobs:
         id: changesets
         with:
           publish: yarn change:publish
-          version: node -e process.exit(1) # There is no versioning available during deployment
+          version: node -e 'console.log("RunningVersionCommandNotAllowed");process.exit(1)' # There is no versioning available during deployment
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

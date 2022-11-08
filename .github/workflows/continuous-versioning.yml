@@ -33,6 +33,6 @@ jobs:
   start-deploy:
     name: Start Deployment
     needs: [ci, version]
-    if: needs.version.outputs.trigger-publish
+    if: needs.version.outputs.trigger-publish == 'true'
     uses: ./.github/workflows/continuous-deployment.yml
     secrets: inherit

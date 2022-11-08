@@ -21,12 +21,17 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn install
+      - uses: peter-murray/workflow-application-token-action@8e1ba3bf1619726336414f1014e37f17fbadf1db # ratchet:actions/setup-node@v1
+        id: generate-token
+        with:
+          application_id: ${{ secrets.GENERATE_TOKEN_APPLICATION_ID }}
+          application_private_key: ${{ secrets.GENERATE_TOKEN_PRIVATE_KEY }}
       - uses: changesets/action@5f3b898718761af42fe162af3258e4145d07be24 # ratchet:changesets/action@v1
         id: changesets
         with:
           version: yarn change:version
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
           NPM_TOKEN: well-known
   start-deploy:
     name: Start Deployment

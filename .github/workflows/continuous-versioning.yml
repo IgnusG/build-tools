@@ -11,7 +11,7 @@ jobs:
     name: Version
     runs-on: ubuntu-latest
     outputs:
-      trigger-publish: ${{ steps.changesets.outputs.pullRequestNumber == null }}
+      trigger-publish: ${{ steps.changesets.outputs.hasChangesets == 'false' && steps.commit.outputs.result.release == 'true' }}
     strategy:
       matrix:
         node-version: [17.8.0]
@@ -32,6 +32,17 @@ jobs:
           version: yarn change:version
         env:
           GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
+      - uses: actions/github-script@d556feaca394842dc55e4734bf3bb9f685482fa0 #ratchet:actions/github-script@v6
+        id: commit
+        with:
+          script: |
+            const commit = await github.rest.git.getCommit({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              commit_sha: context.sha,
+            });
+            const release = commit.data.message.startsWith("Release changes\n") && commit.data.commiter.name === "github-actions[bot]";
+            return { release };
   start-deploy:
     name: Start Deployment
     needs: [ci, version]

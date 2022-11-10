@@ -278,17 +278,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@changesets/types@npm:5.2.0, @changesets/types@npm:^5.0.0, @changesets/types@npm:^5.1.0, @changesets/types@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "@changesets/types@npm:5.2.0"
+  checksum: 0cca9cf8e8bff2e4677059a0a3be1c47f54c45b62db932b8ee789f094216246b302d49c5b4a19c44abb83aeb7bdc488a6d1bd93477c51e4e4acce29db5849abb
+  languageName: node
+  linkType: hard
+
 "@changesets/types@npm:^4.0.1":
   version: 4.1.0
   resolution: "@changesets/types@npm:4.1.0"
   checksum: 01f53199f57d511aeccf847c4aa8b0129e8ba61207bade635b3ca4663d247b2df983fdf12916a2047cedd85e260ea17542bf7eec11905aa6a92df647959dabd5
-  languageName: node
-  linkType: hard
-
-"@changesets/types@npm:^5.0.0, @changesets/types@npm:^5.1.0, @changesets/types@npm:^5.2.0":
-  version: 5.2.0
-  resolution: "@changesets/types@npm:5.2.0"
-  checksum: 0cca9cf8e8bff2e4677059a0a3be1c47f54c45b62db932b8ee789f094216246b302d49c5b4a19c44abb83aeb7bdc488a6d1bd93477c51e4e4acce29db5849abb
   languageName: node
   linkType: hard
 
@@ -809,6 +809,7 @@ __metadata:
   dependencies:
     "@changesets/changelog-github": "npm:0.4.4"
     "@changesets/cli": "npm:2.22.0"
+    "@changesets/types": "npm:5.2.0"
     "@types/node": "npm:18.11.9"
     "@typescript-eslint/eslint-plugin": "npm:5.42.0"
     "@typescript-eslint/parser": "npm:5.42.0"

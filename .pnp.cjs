@@ -33,6 +33,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@changesets/changelog-github", "npm:0.4.4"],\
           ["@changesets/cli", "npm:2.22.0"],\
+          ["@changesets/types", "npm:5.2.0"],\
           ["@types/node", "npm:18.11.9"],\
           ["@typescript-eslint/eslint-plugin", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:5.42.0"],\
           ["@typescript-eslint/parser", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:5.42.0"],\
@@ -1037,6 +1038,7 @@ const RAW_RUNTIME_STATE =
           ["@workspace/root", "workspace:."],\
           ["@changesets/changelog-github", "npm:0.4.4"],\
           ["@changesets/cli", "npm:2.22.0"],\
+          ["@changesets/types", "npm:5.2.0"],\
           ["@types/node", "npm:18.11.9"],\
           ["@typescript-eslint/eslint-plugin", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:5.42.0"],\
           ["@typescript-eslint/parser", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:5.42.0"],\

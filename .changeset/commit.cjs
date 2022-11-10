@@ -1,7 +1,27 @@
-function getAddMessage(changeset) {
-	return `Add changeset: ${changeset.summary}`;
+function chunkString(str, length) {
+	return str.match(new RegExp(".{1," + length + "}", "g")) ?? [];
 }
 
+/**
+ * @param {import("@changesets/types").Changeset} changeset
+ * @returns {string}
+ */
+function getAddMessage(changeset) {
+	const [title, ...rest] = changeset.summary.split("\n");
+
+	const commitBody = chunkString(
+		rest[0] === "" ? rest.join("\n") : `\n${rest.join("\n")}`,
+		80,
+	).join("\n");
+
+	return `Add changeset: ${title}\n${commitBody}`;
+}
+
+/**
+ *
+ * @param {import("@changesets/types").ReleasePlan} releasePlan
+ * @returns {string}
+ */
 function getVersionMessage(releasePlan) {
 	const publishableReleases = releasePlan.releases.filter((release) => release.type !== "none");
 	const releasesLines = publishableReleases
@@ -11,7 +31,7 @@ function getVersionMessage(releasePlan) {
 	return `Release changes
 
 Releases:
-${releasesLines}
+${chunkString(releasesLines, 80).join("\n")}
 `;
 }
 

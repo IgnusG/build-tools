@@ -17,14 +17,14 @@
     "#exports": "Generated automatically by @ignsg/vite-build-tools",
     "exports": {
         "./vite-plugin-entries": {
-            "types": "./dist/vite-plugin-entries.d.ts",
-            "import": "./dist/vite-plugin-entries.es.js",
-            "default": "./dist/vite-plugin-entries.es.js"
+            "types": "./dist/vite-plugin-entries-cc11fd23.d.ts",
+            "import": "./dist/vite-plugin-entries-cc11fd23.es.js",
+            "default": "./dist/vite-plugin-entries-cc11fd23.es.js"
         },
         "./vite-plugin-dts": {
-            "types": "./dist/vite-plugin-dts.d.ts",
-            "import": "./dist/vite-plugin-dts.es.js",
-            "default": "./dist/vite-plugin-dts.es.js"
+            "types": "./dist/vite-plugin-dts-62f6f11c.d.ts",
+            "import": "./dist/vite-plugin-dts-62f6f11c.es.js",
+            "default": "./dist/vite-plugin-dts-62f6f11c.es.js"
         }
     },
     "devDependencies": {

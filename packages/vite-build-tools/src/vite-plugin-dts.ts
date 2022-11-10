@@ -1,13 +1,15 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
+import { cwd } from "node:process";
 
-import { Plugin, UserConfig } from "vite";
+import { Plugin, ResolvedConfig } from "vite";
 
 import { Entry, PackageJsonExports, PluginOptions } from "./types.js";
-import { getPackageJSONPath } from "./utilities.js";
-import { reduceEntryOptionsToEntries } from "./vite-plugin-entries.js";
+import { createReduceEntryOptionsToEntries, getPackageJSONPath } from "./utilities.js";
 
 export type { PluginOptions };
+
+type InputToOutput = Map<string, string>;
 
 interface PackageJsonTypeExports {
 	[exportPath: string]: {
@@ -15,24 +17,42 @@ interface PackageJsonTypeExports {
 	};
 }
 
-function createReduceEntriesToPackageExports({ outDir }: { outDir?: string }) {
+function createReduceEntriesToPackageExports({
+	inputToOutput,
+	buildConfig,
+}: {
+	inputToOutput: InputToOutput;
+	buildConfig: ResolvedConfig["build"];
+}) {
+	function outputToExportPath(output: string) {
+		return "./" + path.join(buildConfig.outDir, output);
+	}
+
 	return function reduceEntriesToPackageExports(
 		result: PackageJsonTypeExports,
 		entry: Entry,
 	): PackageJsonTypeExports {
+		const output = inputToOutput.get(entry.sourcePath);
+
+		if (!output) {
+			throw new Error(`Cannot find actual .dts output path for entry source "${entry.sourcePath}"`);
+		}
+
 		return {
 			...result,
 
 			[entry.exportPath]: {
-				types: "./" + path.join(outDir ?? "", `${entry.outputPath}.d.ts`),
+				types: outputToExportPath(output),
 			},
 		};
 	};
 }
 
-function createReduceExistingExportsEntriesToTypedPackageExports(
-	entryTypeExports: Map<string, { types: string }>,
-) {
+function createReduceExistingExportsEntriesToTypedPackageExports({
+	entryTypeExports,
+}: {
+	entryTypeExports: Map<string, { types: string }>;
+}) {
 	return function reduceExistingExportsEntriesToTypedPackageExports(
 		result: PackageJsonExports,
 		[entryExportPath, entryExports]: [string, PackageJsonExports[string]],
@@ -55,69 +75,98 @@ function createReduceExistingExportsEntriesToTypedPackageExports(
 	};
 }
 
-export default async function dtsPlugin(opts: PluginOptions): Promise<Plugin> {
+export default async function dtsPlugin(options: PluginOptions): Promise<Plugin> {
 	let entries: Map<string, Entry>;
-	let config: UserConfig;
+	let config: ResolvedConfig;
 
-	let bundleGenerated = false;
+	const inputToOutput: InputToOutput = new Map();
 
 	return {
 		name: "vite:dts",
 		config(userConfig) {
-			entries = new Map(Object.entries(opts.entries.reduce(reduceEntryOptionsToEntries, {})));
+			entries = new Map(
+				Object.entries(
+					options.entries.reduce(
+						createReduceEntryOptionsToEntries({ config: userConfig, options }),
+						{},
+					),
+				),
+			);
+		},
+
+		configResolved(userConfig) {
 			config = userConfig;
 		},
 
-		generateBundle(options) {
-			if (bundleGenerated) return;
+		generateBundle(outputOptions, bundle) {
+			if (outputOptions.format !== options.formats[0]) return;
 
-			for (const { outputPath, sourcePath } of entries.values()) {
-				if (!options.dir) {
-					throw new Error("");
-				}
+			for (const assetOrChunk of Object.values(bundle)) {
+				if (assetOrChunk.type !== "chunk") continue;
+				if (!assetOrChunk.facadeModuleId) continue;
+				if (!assetOrChunk.isEntry) continue;
 
-				const file = fs.readFileSync(sourcePath).toString();
-				const outputDir = path.parse(outputPath).dir;
-
-				const relativePath = path.relative(
-					path.resolve(path.join(options.dir, outputDir)),
-					path.join(path.parse(sourcePath).dir, `${path.parse(sourcePath).name}.js`),
-				);
+				const file = fs.readFileSync(assetOrChunk.facadeModuleId).toString();
 
 				const hasDefaultExport = /^(export default |export \{[^}]+? as default\s*[,}])/m.test(file);
 
+				const relativePath = path.relative(
+					path.join(config.root ?? cwd(), assetOrChunk.fileName),
+					assetOrChunk.facadeModuleId,
+				);
+
+				const relativeJsPath = relativePath.replace(/\.ts(x)?$/, ".js$1");
+
 				const source =
-					`export * from "${relativePath}"` +
-					(hasDefaultExport ? `\nexport {default} from "${relativePath}"` : ``);
+					`export * from "${relativeJsPath}"` +
+					(hasDefaultExport ? `\nexport {default} from "${relativeJsPath}"` : ``);
+
+				const output = path.join(
+					path.parse(assetOrChunk.fileName).dir,
+					`${path.parse(assetOrChunk.fileName).name.replace(/\.(es|cjs)$/, "")}.d.ts`,
+				);
+
+				inputToOutput.set(assetOrChunk.facadeModuleId, output);
 
 				this.emitFile({
 					type: "asset",
-					fileName: path.join(outputDir, `${path.parse(outputPath).name}.d.ts`),
+					fileName: output,
 					source,
 				});
 			}
-
-			bundleGenerated = true;
 		},
 
 		closeBundle() {
-			const packageDetails = JSON.parse(fs.readFileSync(getPackageJSONPath(config)).toString());
+			const packageDetails = JSON.parse(fs.readFileSync(getPackageJSONPath({ config })).toString());
 			const entryTypeExports = new Map(
 				Object.entries(
 					Array.from(entries.values()).reduce(
-						createReduceEntriesToPackageExports({ ...config.build }),
+						createReduceEntriesToPackageExports({ inputToOutput, buildConfig: config.build }),
 						{},
 					),
 				),
 			);
 
-			this.warn("Adding type definitions to the `exports` field in your package.json ✅");
+			if (
+				!packageDetails["#exports"] ||
+				!packageDetails["#exports"].startsWith("Generated automatically")
+			) {
+				throw new Error(
+					`Couldn't find the auto-generated marker #exports - add the vite-plugin-entries plugin before vite-plugin-dts (it must run after it)`,
+				);
+			}
+
+			if (!options.silent)
+				this.warn("Adding type definitions to the `exports` field in your package.json ✅");
 
 			packageDetails.exports = Array.from(
 				Object.entries(packageDetails.exports as PackageJsonExports),
-			).reduce(createReduceExistingExportsEntriesToTypedPackageExports(entryTypeExports), {});
+			).reduce(createReduceExistingExportsEntriesToTypedPackageExports({ entryTypeExports }), {});
 
-			fs.writeFileSync(getPackageJSONPath(config), JSON.stringify(packageDetails, undefined, 4));
+			fs.writeFileSync(
+				getPackageJSONPath({ config }),
+				JSON.stringify(packageDetails, undefined, 4),
+			);
 		},
 	};
 }

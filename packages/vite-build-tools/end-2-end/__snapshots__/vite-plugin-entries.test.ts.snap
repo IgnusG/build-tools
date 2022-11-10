@@ -71,3 +71,35 @@ const greeting = \\"Hello World!\\";
 exports.greeting = greeting;
 "
 `;
+
+exports[`vite-plugin-entries > supports nesting folders outputting the same filename 1`] = `
+"const greeting = \\"Hello World!\\";
+export {
+  greeting
+};
+"
+`;
+
+exports[`vite-plugin-entries > supports nesting folders outputting the same filename 2`] = `
+"const greeting = \\"Nested Hello World!\\";
+export {
+  greeting
+};
+"
+`;
+
+exports[`vite-plugin-entries > supports nesting folders outputting the same filename 3`] = `
+"\\"use strict\\";
+Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: \\"Module\\" } });
+const greeting = \\"Hello World!\\";
+exports.greeting = greeting;
+"
+`;
+
+exports[`vite-plugin-entries > supports nesting folders outputting the same filename 4`] = `
+"\\"use strict\\";
+Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: \\"Module\\" } });
+const greeting = \\"Nested Hello World!\\";
+exports.greeting = greeting;
+"
+`;

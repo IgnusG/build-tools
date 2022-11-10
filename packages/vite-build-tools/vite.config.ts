@@ -1,10 +1,17 @@
+/// <reference types="vitest" />
+
+import url from "node:url";
+
 import { defineConfig } from "vite";
 
 import dtsPlugin from "./src/vite-plugin-dts.js";
 import entriesPlugin, { PluginOptions } from "./src/vite-plugin-entries.js";
 
+export const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
+
 const buildConfig: PluginOptions = {
 	formats: ["es"],
+	sourceRoot: "./src",
 	entries: [
 		{
 			sourcePath: "./src/vite-plugin-entries.ts",
@@ -15,13 +22,14 @@ const buildConfig: PluginOptions = {
 	],
 };
 
-export default defineConfig(async () => {
+export default defineConfig(async (env) => {
 	return {
-		plugins: [entriesPlugin(buildConfig), dtsPlugin(buildConfig)],
+		plugins: [env.mode !== "test" && [entriesPlugin(buildConfig), dtsPlugin(buildConfig)]],
 		cacheDir: ".vite/cache",
 		build: {
 			target: ["node18"],
-			outDir: "dist",
+			sourcemap: true,
+			outDir: "./dist",
 			minify: false,
 			rollupOptions: {
 				external: [/node:.*/],

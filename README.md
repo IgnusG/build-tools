@@ -2,6 +2,12 @@
 
 Helpers for Vite & others for my other libraries.
 
+## Usage
+
+### `@ignsg/vite-build-tools`
+
+See [packages/vite-build-tools](./packages/vite-build-tools/README.md)
+
 ## Contributing
 
 Thanks for your interest! Just a few more steps to follow and we can get your local environment up and running.

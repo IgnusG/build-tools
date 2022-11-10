@@ -1,4 +1,5 @@
-import path from "path";
+import path from "node:path";
+
 import { build, InlineConfig } from "vite";
 import { afterAll, beforeEach, describe, expect, test } from "vitest";
 
@@ -37,13 +38,13 @@ describe("vite-plugin-entries", () => {
 			plugins: [entriesPlugin(buildConfig), dtsPlugin(buildConfig)],
 		});
 
-		expect(readFile("fixtures/dist/index.d.ts")).toMatchSnapshot();
+		expect(readFile("fixtures/dist/index-ae38ff01.d.ts")).toMatchSnapshot();
 
 		expect(JSON.parse(readFile("fixtures/package.json"))).toEqual(
 			expect.objectContaining({
 				exports: {
 					"./index": expect.objectContaining({
-						types: "./dist/index.d.ts",
+						types: "./dist/index-ae38ff01.d.ts",
 					}),
 				},
 			}),

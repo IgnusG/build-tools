@@ -12,31 +12,31 @@ This plugin is meant to simplify management of multi-entry libraries. You provid
 // vite.config.ts
 
 import entriesPlugin, {
-	PluginOptions as ViteBuildPluginOptions,
+    PluginOptions as ViteBuildPluginOptions,
 } from "@ignsg/vite-build-tools/vite-plugin-entries";
 
 const buildConfig: ViteBuildPluginOptions = {
-	formats: ["es"],
-	entries: [
-		{
-			sourcePath: "./src/index.ts",
-			outputPath: "lib/output",
-			exports: {
-				isMain: true,
-			},
-		},
-		{
-			sourcePath: "./src/folder/index.ts",
-			outputPath: "lib/otherOutput",
-			exports: {
-				exportPath: "./awesome",
-			},
-		},
-	],
+    formats: ["es"],
+    entries: [
+        {
+            sourcePath: "./src/index.ts",
+            outputPath: "lib/output",
+            exports: {
+                isMain: true,
+            },
+        },
+        {
+            sourcePath: "./src/folder/index.ts",
+            outputPath: "lib/otherOutput",
+            exports: {
+                exportPath: "./awesome",
+            },
+        },
+    ],
 };
 
 export default {
-	plugins: [entriesPlugin(buildConfig)],
+    plugins: [entriesPlugin(buildConfig)],
 };
 ```
 
@@ -116,4 +116,4 @@ And modify the package.json like so:
 }
 ```
 
-> Of course this library is using itself for the build configuration. Take a look at the [vite.config.ts](./vite.config.ts) to check out how it works. Enjoy 🎉
+> Of course this library is using itself for the build configuration. Take a look at [vite.config.ts](./vite.config.ts) to check out how it works. Enjoy 🎉

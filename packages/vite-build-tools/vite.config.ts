@@ -1,6 +1,6 @@
 /// <reference types="vitest" />
 
-import url from "node:url";
+import * as url from "node:url";
 
 import { defineConfig } from "vite";
 

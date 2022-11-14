@@ -1,12 +1,5 @@
 {
-	"compilerOptions": {
-		"target": "ESNext",
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext",
-		"strict": true,
-		"isolatedModules": true,
-		"resolveJsonModule": true,
-		"skipLibCheck": true
-	},
-	"include": ["package.json", "vite.config.ts", "src"]
+    "extends": "../../tsconfig.json",
+    "include": ["src"],
+    "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -41,7 +41,7 @@ jobs:
               repo: context.repo.repo,
               commit_sha: context.sha,
             });
-            const release = commit.data.message.startsWith("Release changes\n") && commit.data.commiter.name === "github-actions[bot]";
+            const release = commit.data.message.startsWith("Release changes\n") && commit.data.committer.name === "github-actions[bot]";
             return { release };
   start-deploy:
     name: Start Deployment

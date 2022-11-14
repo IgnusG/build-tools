@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn install
-      - run: yarn each test run
+      - run: yarn each test -- run
   build:
     name: Build
     runs-on: ubuntu-latest

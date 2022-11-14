@@ -1,36 +1,36 @@
 {
-	"name": "@ignsg/vite-build-tools",
-	"version": "0.0.1",
-	"type": "module",
-	"publishConfig": {
-		"access": "public"
-	},
-	"files": [
-		"dist",
-		"src"
-	],
-	"scripts": {
-		"build": "rm -rf dist && yarn vite build",
-		"test": "vitest",
-		"test:related": "vitest related --run"
-	},
-	"#exports": "Generated automatically by @ignsg/vite-build-tools",
-	"exports": {
-		"./vite-plugin-entries": {
-			"types": "./dist/vite-plugin-entries-cc11fd23.d.ts",
-			"import": "./dist/vite-plugin-entries-cc11fd23.es.js",
-			"default": "./dist/vite-plugin-entries-cc11fd23.es.js"
-		},
-		"./vite-plugin-dts": {
-			"types": "./dist/vite-plugin-dts-62f6f11c.d.ts",
-			"import": "./dist/vite-plugin-dts-62f6f11c.es.js",
-			"default": "./dist/vite-plugin-dts-62f6f11c.es.js"
-		}
-	},
-	"devDependencies": {
-		"@workspace/root": "workspace:*",
-		"rollup": "3.2.5",
-		"vite": "3.2.2",
-		"vitest": "0.25.0"
-	}
+    "name": "@ignsg/vite-build-tools",
+    "version": "0.0.1",
+    "type": "module",
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "dist",
+        "src"
+    ],
+    "scripts": {
+        "build": "rm -rf dist && yarn vite build",
+        "test": "vitest",
+        "test:related": "vitest related --run"
+    },
+    "#exports": "Generated automatically by @ignsg/vite-build-tools",
+    "exports": {
+        "./vite-plugin-entries": {
+            "types": "./dist/vite-plugin-entries-cc11fd23.d.ts",
+            "import": "./dist/vite-plugin-entries-cc11fd23.es.js",
+            "default": "./dist/vite-plugin-entries-cc11fd23.es.js"
+        },
+        "./vite-plugin-dts": {
+            "types": "./dist/vite-plugin-dts-62f6f11c.d.ts",
+            "import": "./dist/vite-plugin-dts-62f6f11c.es.js",
+            "default": "./dist/vite-plugin-dts-62f6f11c.es.js"
+        }
+    },
+    "devDependencies": {
+        "@workspace/root": "workspace:*",
+        "rollup": "3.2.5",
+        "vite": "3.2.2",
+        "vitest": "0.25.0"
+    }
 }

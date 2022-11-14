@@ -4,6 +4,3 @@ coverage
 .yarn
 .pnp.cjs
 .pnp.loader.mjs
-
-# Ignore files used in automated steps
-package.json

@@ -18,6 +18,7 @@
     },
     "packageManager": "yarn@4.0.0-rc.27",
     "workspaces": [
+        ".",
         "packages/*"
     ],
     "devDependencies": {

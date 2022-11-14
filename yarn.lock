@@ -381,6 +381,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ignsg/vite-build-tools@workspace:packages/vite-build-tools"
   dependencies:
+    "@workspace/root": "workspace:*"
     rollup: "npm:3.2.5"
     vite: "npm:3.2.2"
     vitest: "npm:0.25.0"
@@ -803,7 +804,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@workspace/root@workspace:.":
+"@workspace/root@workspace:*, @workspace/root@workspace:.":
   version: 0.0.0-use.local
   resolution: "@workspace/root@workspace:."
   dependencies:

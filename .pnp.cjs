@@ -465,6 +465,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./packages/vite-build-tools/",\
         "packageDependencies": [\
           ["@ignsg/vite-build-tools", "workspace:packages/vite-build-tools"],\
+          ["@workspace/root", "workspace:."],\
           ["rollup", "npm:3.2.5"],\
           ["vite", "virtual:858f98265912d12d562c9fb8980dd7ac5611bf74b6bda66b4fcc3c3a89e24ef5da989adf71cdad405f96835f2818206c68be0a3a4227e45aebdeeb10d938b71b#npm:3.2.2"],\
           ["vitest", "virtual:858f98265912d12d562c9fb8980dd7ac5611bf74b6bda66b4fcc3c3a89e24ef5da989adf71cdad405f96835f2818206c68be0a3a4227e45aebdeeb10d938b71b#npm:0.25.0"]\

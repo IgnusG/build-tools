@@ -43,4 +43,5 @@ jobs:
           token: "${{ secrets.GITHUB_TOKEN }}"
           environment: ${{ matrix.name }}
           payload: ${{ toJSON(matrix) }}
+          initial-status: success
           production-environment: true

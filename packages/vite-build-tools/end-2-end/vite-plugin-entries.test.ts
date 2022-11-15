@@ -8,12 +8,9 @@ import entriesPlugin, { PluginOptions } from "../src/vite-plugin-entries.js";
 import { __dirname, cleanup, readFile } from "./utilities.js";
 
 const defaultBuidConfig: InlineConfig = {
-	mode: "production",
-	cacheDir: ".vite/cache",
 	root: path.join(__dirname, "fixtures"),
 	build: {
 		target: ["node18"],
-		outDir: "dist",
 		minify: false,
 	},
 };

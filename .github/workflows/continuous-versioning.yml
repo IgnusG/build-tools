@@ -11,7 +11,7 @@ jobs:
     name: Version
     runs-on: ubuntu-latest
     outputs:
-      trigger-publish: ${{ steps.changesets.outputs.hasChangesets == 'false' && steps.commit.outputs.result.release == 'true' }}
+      trigger-deploy: ${{ steps.changesets.outputs.hasChangesets == 'false' && steps.commit.outputs.result == 'true' }}
     strategy:
       matrix:
         node-version: [17.8.0]
@@ -41,11 +41,11 @@ jobs:
               repo: context.repo.repo,
               commit_sha: context.sha,
             });
-            const release = commit.data.message.startsWith("Release changes\n") && commit.data.author.name === "github-actions[bot]";
-            return { release };
+            const deploy = commit.data.message.startsWith("Release changes\n") && commit.data.author.name === "github-actions[bot]";
+            return deploy;
   start-deploy:
     name: Start Deployment
     needs: [ci, version]
-    if: needs.version.outputs.trigger-publish == 'true'
+    if: needs.version.outputs.trigger-deploy == 'true'
     uses: ./.github/workflows/continuous-deployment.yml
     secrets: inherit

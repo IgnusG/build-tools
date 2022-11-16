@@ -6,7 +6,8 @@
         "name": "IgnusG"
     },
     "repository": {
-        "url": "https://github.com/IgnusG/build-tools/tree/main/packages/vite-build-tools"
+        "url": "https://github.com/IgnusG/build-tools.git",
+        "directory": "packages/vite-build-tools"
     },
     "bugs": {
         "url": "https://github.com/IgnusG/build-tools/issues"

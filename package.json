@@ -7,9 +7,10 @@
     },
     "scripts": {
         "prepare-local": "./prepare.ts",
+        "prepare-ci": "./prepare.ts --ci",
         "each": "turbo",
         "format": "prettier -w . && eslint --fix .",
-        "lint": "python ./.tools/pre-commit.pyz run",
+        "lint": "poetry run pre-commit run",
         "check-dependencies": "yarn install --check-cache",
         "change:create": "changeset",
         "change:version": "changeset version",

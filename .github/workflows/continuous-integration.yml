@@ -62,6 +62,10 @@ jobs:
         with:
           key: venv-${{ runner.os }}-${{ matrix.python-version }}-${{ matrix.poetry-version }}-${{ hashFiles('**/poetry.lock') }}
           path: .venv
+      - uses: actions/cache@9b0c1fce7a93df8e3bb8926b0d6e9d89e92f20a7 # ratchet:actions/cache@v3
+        with:
+          key: pre-commit-${{ runner.os }}-${{ hashFiles('**/.pre-commit-config.yaml') }}-${{ hashFiles('**/poetry.lock') }}
+          path: ~/.cache/pre-commit
       - run: yarn install
       - run: yarn prepare-ci
       - run: yarn lint --all-files

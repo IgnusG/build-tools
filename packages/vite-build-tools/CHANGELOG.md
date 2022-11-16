@@ -1,5 +1,11 @@
 # @ignsg/vite-build-tools
 
+## 0.1.1
+
+### Patch Changes
+
+- [`ac53aa9`](https://github.com/IgnusG/build-tools/commit/ac53aa9e617a9704b5b965ea182e9f032fbe4067) Thanks [@IgnusG](https://github.com/IgnusG)! - Update the package README's links
+
 ## 0.1.0
 
 ### Minor Changes

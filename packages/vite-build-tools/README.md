@@ -69,7 +69,7 @@ And modify the package.json like so:
 }
 ```
 
-To learn about other configuration options check out [src/types.ts](./src/types.ts)
+To learn about other configuration options check out [src/types.ts](https://github.com/IgnusG/build-tools/tree/main/packages/vite-build-tools/src/types.ts)
 
 ## `@ignsg/vite-build-tools/vite-plugin-dts`
 
@@ -116,4 +116,4 @@ And modify the package.json like so:
 }
 ```
 
-> Of course this library is using itself for the build configuration. Take a look at [vite.config.ts](./vite.config.ts) to check out how it works. Enjoy 🎉
+> Of course this library is using itself for the build configuration. Take a look at [vite.config.ts](https://github.com/IgnusG/build-tools/tree/main/packages/vite-build-tools/vite.config.ts) to check out how it works. Enjoy 🎉

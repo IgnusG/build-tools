@@ -1,5 +1,11 @@
 # @ignsg/vite-build-tools
 
+## 0.1.2
+
+### Patch Changes
+
+- [`0680d1a`](https://github.com/IgnusG/build-tools/commit/0680d1a76fe0c6ddc386536c30c9fc6a6c0c90de) Thanks [@IgnusG](https://github.com/IgnusG)! - Add author, repository and bugs fields in package.json
+
 ## 0.1.1
 
 ### Patch Changes

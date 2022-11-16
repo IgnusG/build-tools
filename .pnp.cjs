@@ -469,7 +469,7 @@ const RAW_RUNTIME_STATE =
           ["@ignsg/vite-build-tools", "workspace:packages/vite-build-tools"],\
           ["@workspace/root", "workspace:."],\
           ["rollup", "npm:3.3.0"],\
-          ["vite", "virtual:858f98265912d12d562c9fb8980dd7ac5611bf74b6bda66b4fcc3c3a89e24ef5da989adf71cdad405f96835f2818206c68be0a3a4227e45aebdeeb10d938b71b#npm:3.2.3"],\
+          ["vite", "virtual:858f98265912d12d562c9fb8980dd7ac5611bf74b6bda66b4fcc3c3a89e24ef5da989adf71cdad405f96835f2818206c68be0a3a4227e45aebdeeb10d938b71b#npm:3.2.4"],\
           ["vitest", "virtual:858f98265912d12d562c9fb8980dd7ac5611bf74b6bda66b4fcc3c3a89e24ef5da989adf71cdad405f96835f2818206c68be0a3a4227e45aebdeeb10d938b71b#npm:0.25.2"]\
         ],\
         "linkType": "SOFT"\
@@ -6216,10 +6216,17 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:858f98265912d12d562c9fb8980dd7ac5611bf74b6bda66b4fcc3c3a89e24ef5da989adf71cdad405f96835f2818206c68be0a3a4227e45aebdeeb10d938b71b#npm:3.2.3", {\
-        "packageLocation": "./.yarn/__virtual__/vite-virtual-07f7201ced/0/cache/vite-npm-3.2.3-34712b84f7-ddd857ae99.zip/node_modules/vite/",\
+      ["npm:3.2.4", {\
+        "packageLocation": "./.yarn/cache/vite-npm-3.2.4-bd281d599b-7d3d67837a.zip/node_modules/vite/",\
         "packageDependencies": [\
-          ["vite", "virtual:858f98265912d12d562c9fb8980dd7ac5611bf74b6bda66b4fcc3c3a89e24ef5da989adf71cdad405f96835f2818206c68be0a3a4227e45aebdeeb10d938b71b#npm:3.2.3"],\
+          ["vite", "npm:3.2.4"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:858f98265912d12d562c9fb8980dd7ac5611bf74b6bda66b4fcc3c3a89e24ef5da989adf71cdad405f96835f2818206c68be0a3a4227e45aebdeeb10d938b71b#npm:3.2.4", {\
+        "packageLocation": "./.yarn/__virtual__/vite-virtual-34821f5c44/0/cache/vite-npm-3.2.4-bd281d599b-7d3d67837a.zip/node_modules/vite/",\
+        "packageDependencies": [\
+          ["vite", "virtual:858f98265912d12d562c9fb8980dd7ac5611bf74b6bda66b4fcc3c3a89e24ef5da989adf71cdad405f96835f2818206c68be0a3a4227e45aebdeeb10d938b71b#npm:3.2.4"],\
           ["@types/less", null],\
           ["@types/node", null],\
           ["@types/sass", null],\

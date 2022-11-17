@@ -17,6 +17,17 @@ repos:
         require_serial: true
         pass_filenames: false
 
+  - repo: local
+    hooks:
+      - id: yarn-eslint
+        stages: ["manual"]
+        files: \.tsx?$
+        name: "Run eslint"
+        language: system
+        entry: yarn
+        args: ["eslint"]
+        types: [text]
+
   - repo: https://github.com/jorisroovers/gitlint
     rev: 4d96698f756df4f9f510de95099d987cd7182de2 # v0.17.0
     hooks:

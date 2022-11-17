@@ -1,5 +1,11 @@
 # @ignsg/vite-build-tools
 
+## 0.1.3
+
+### Patch Changes
+
+- [`757d170`](https://github.com/IgnusG/build-tools/commit/757d170e2721d76f4428f45f6547d3231315c02c) Thanks [@IgnusG](https://github.com/IgnusG)! - Add support for preserving the end of file newline for package.json during generation
+
 ## 0.1.2
 
 ### Patch Changes

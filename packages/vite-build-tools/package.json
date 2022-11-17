@@ -21,6 +21,7 @@
     ],
     "scripts": {
         "build": "yarn vite build",
+        "build:package.json": "yarn build && git add package.json",
         "test": "vitest",
         "test:related": "vitest related --run"
     },

@@ -13,7 +13,7 @@ echo(`prepare.ts: Preparing workspace`);
 async function prepareVSCode() {
 	if (ci) return;
 
-	if (!(await fs.stat(VSCODE_SETTINGS))) {
+	if (!fs.existsSync(VSCODE_SETTINGS)) {
 		echo(
 			`prepare.ts: ${chalk.blue("Copying VS Code template settings")} into ${VSCODE_SETTINGS}... `,
 		);

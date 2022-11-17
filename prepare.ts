@@ -2,7 +2,7 @@
 
 import { $, argv, chalk, echo, fs, which } from "zx";
 
-const ci = !!argv["--ci"];
+const skipLocal = argv["ci"];
 
 const VSCODE_PATH = "./.vscode";
 const VSCODE_SETTINGS_TEMPLATE = `${VSCODE_PATH}/settings-template.json`;
@@ -11,7 +11,7 @@ const VSCODE_SETTINGS = `${VSCODE_PATH}/settings.json`;
 echo(`prepare.ts: Preparing workspace`);
 
 async function prepareVSCode() {
-	if (ci) return;
+	if (skipLocal) return;
 
 	if (!fs.existsSync(VSCODE_SETTINGS)) {
 		echo(
@@ -45,7 +45,7 @@ async function prepareCommitHooks() {
 
 	await $`poetry install --no-interaction`;
 
-	if (!ci) await $`poetry run pre-commit install -t commit-msg -t pre-commit`;
+	if (!skipLocal) await $`poetry run pre-commit install -t commit-msg -t pre-commit`;
 }
 
 await prepareVSCode();

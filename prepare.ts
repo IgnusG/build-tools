@@ -1,8 +1,8 @@
 #!/usr/bin/env -S yarn pnpify ts-node -T --esm
 
-import { $, chalk, echo, fs, which } from "zx";
+import { $, argv, chalk, echo, fs, which } from "zx";
 
-const ci = process.argv.includes("--ci");
+const ci = !!argv["--ci"];
 
 const VSCODE_PATH = "./.vscode";
 const VSCODE_SETTINGS_TEMPLATE = `${VSCODE_PATH}/settings-template.json`;

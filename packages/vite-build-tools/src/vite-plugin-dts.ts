@@ -137,7 +137,9 @@ export default async function dtsPlugin(options: PluginOptions): Promise<Plugin>
 		},
 
 		closeBundle() {
-			const packageDetails = JSON.parse(fs.readFileSync(getPackageJSONPath({ config })).toString());
+			const packageText = fs.readFileSync(getPackageJSONPath({ config })).toString();
+			const packageDetails = JSON.parse(packageText);
+
 			const entryTypeExports = new Map(
 				Object.entries(
 					Array.from(entries.values()).reduce(
@@ -165,7 +167,7 @@ export default async function dtsPlugin(options: PluginOptions): Promise<Plugin>
 
 			fs.writeFileSync(
 				getPackageJSONPath({ config }),
-				JSON.stringify(packageDetails, undefined, 4),
+				JSON.stringify(packageDetails, undefined, 4) + (packageText.endsWith("\n") ? "\n" : ""),
 			);
 		},
 	};

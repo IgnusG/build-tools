@@ -228,7 +228,9 @@ export default async function entriesPlugin(options: PluginOptions): Promise<Plu
 				"devDependencies",
 			];
 
-			const packageDetails = JSON.parse(fs.readFileSync(getPackageJSONPath({ config })).toString());
+			const packageText = fs.readFileSync(getPackageJSONPath({ config })).toString();
+
+			const packageDetails = JSON.parse(packageText);
 
 			// Protect against overwriting existing user package.json configuration
 			if (
@@ -286,7 +288,8 @@ export default async function entriesPlugin(options: PluginOptions): Promise<Plu
 
 			fs.writeFileSync(
 				getPackageJSONPath({ config }),
-				JSON.stringify(adjustedPackageJson, undefined, 4),
+				JSON.stringify(adjustedPackageJson, undefined, 4) +
+					(packageText.endsWith("\n") ? "\n" : ""),
 			);
 		},
 	};

@@ -20,7 +20,7 @@
         "src"
     ],
     "scripts": {
-        "build": "rm -rf dist && yarn vite build",
+        "build": "yarn vite build",
         "test": "vitest",
         "test:related": "vitest related --run"
     },

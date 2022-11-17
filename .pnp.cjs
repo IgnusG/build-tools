@@ -46,7 +46,7 @@ const RAW_RUNTIME_STATE =
           ["prettier", "npm:2.7.1"],\
           ["ts-node", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:10.9.1"],\
           ["turbo", "npm:1.6.3"],\
-          ["typescript", "patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=7f4d21"],\
+          ["typescript", "patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=d73830"],\
           ["zx", "npm:7.1.1"]\
         ],\
         "linkType": "SOFT"\
@@ -851,7 +851,7 @@ const RAW_RUNTIME_STATE =
           ["regexpp", "npm:3.2.0"],\
           ["semver", "npm:7.3.8"],\
           ["tsutils", "virtual:da7e6aff57d1080d49b35e0202f47f2686bb8bf1db271a8b8de52266acbbd7d5851198ab0a49289df083b15079f3e98ea2b2fa78b00ad448cf69bca792d226d7#npm:3.21.0"],\
-          ["typescript", "patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=7f4d21"]\
+          ["typescript", "patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
         ],\
         "packagePeers": [\
           "@types/eslint",\
@@ -883,7 +883,7 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/typescript-estree", "virtual:17ad3ecfb8af97d2bf4133414d34cecf53cb0a3f1348143c7086ee1606fa6ab6dff98177a68a699475198a8a02076acdaf49a9cd434819a9b17873833883fea7#npm:5.43.0"],\
           ["debug", "virtual:9e3a462140b35a19ddb3d48ebde58d66740d97f4c0386bc195c327fc2c44fa59f43cbcb382dd9f194b16d0dd6c0a138aadd4a9de84088f88e25946598f97cb88#npm:4.3.4"],\
           ["eslint", "npm:8.27.0"],\
-          ["typescript", "patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=7f4d21"]\
+          ["typescript", "patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
         ],\
         "packagePeers": [\
           "@types/eslint",\
@@ -924,7 +924,7 @@ const RAW_RUNTIME_STATE =
           ["debug", "virtual:9e3a462140b35a19ddb3d48ebde58d66740d97f4c0386bc195c327fc2c44fa59f43cbcb382dd9f194b16d0dd6c0a138aadd4a9de84088f88e25946598f97cb88#npm:4.3.4"],\
           ["eslint", "npm:8.27.0"],\
           ["tsutils", "virtual:da7e6aff57d1080d49b35e0202f47f2686bb8bf1db271a8b8de52266acbbd7d5851198ab0a49289df083b15079f3e98ea2b2fa78b00ad448cf69bca792d226d7#npm:3.21.0"],\
-          ["typescript", "patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=7f4d21"]\
+          ["typescript", "patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
         ],\
         "packagePeers": [\
           "@types/eslint",\
@@ -964,7 +964,7 @@ const RAW_RUNTIME_STATE =
           ["is-glob", "npm:4.0.3"],\
           ["semver", "npm:7.3.8"],\
           ["tsutils", "virtual:da7e6aff57d1080d49b35e0202f47f2686bb8bf1db271a8b8de52266acbbd7d5851198ab0a49289df083b15079f3e98ea2b2fa78b00ad448cf69bca792d226d7#npm:3.21.0"],\
-          ["typescript", "patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=7f4d21"]\
+          ["typescript", "patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
         ],\
         "packagePeers": [\
           "@types/typescript",\
@@ -1054,7 +1054,7 @@ const RAW_RUNTIME_STATE =
           ["prettier", "npm:2.7.1"],\
           ["ts-node", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:10.9.1"],\
           ["turbo", "npm:1.6.3"],\
-          ["typescript", "patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=7f4d21"],\
+          ["typescript", "patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=d73830"],\
           ["zx", "npm:7.1.1"]\
         ],\
         "linkType": "SOFT"\
@@ -5883,7 +5883,7 @@ const RAW_RUNTIME_STATE =
           ["create-require", "npm:1.1.1"],\
           ["diff", "npm:4.0.2"],\
           ["make-error", "npm:1.3.6"],\
-          ["typescript", "patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=7f4d21"],\
+          ["typescript", "patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=d73830"],\
           ["v8-compile-cache-lib", "npm:3.0.1"],\
           ["yn", "npm:3.1.1"]\
         ],\
@@ -5943,7 +5943,7 @@ const RAW_RUNTIME_STATE =
           ["tsutils", "virtual:da7e6aff57d1080d49b35e0202f47f2686bb8bf1db271a8b8de52266acbbd7d5851198ab0a49289df083b15079f3e98ea2b2fa78b00ad448cf69bca792d226d7#npm:3.21.0"],\
           ["@types/typescript", null],\
           ["tslib", "npm:1.14.1"],\
-          ["typescript", "patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=7f4d21"]\
+          ["typescript", "patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
         ],\
         "packagePeers": [\
           "@types/typescript",\
@@ -6112,10 +6112,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["typescript", [\
-      ["patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=7f4d21", {\
-        "packageLocation": "./.yarn/cache/typescript-patch-402a45cfde-e449b7c143.zip/node_modules/typescript/",\
+      ["patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=d73830", {\
+        "packageLocation": "./.yarn/cache/typescript-patch-b62919807b-06fd518bc5.zip/node_modules/typescript/",\
         "packageDependencies": [\
-          ["typescript", "patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=7f4d21"]\
+          ["typescript", "patch:typescript@npm%3A4.9.3#optional!builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6901,7 +6901,8 @@ function areStatsEqual(a, b) {
 
 const PortablePath = {
   root: `/`,
-  dot: `.`
+  dot: `.`,
+  parent: `..`
 };
 const Filename = {
   home: `~`,
@@ -8396,7 +8397,7 @@ class NodeFS extends BasePortableFakeFS {
 
 const MOUNT_MASK = 4278190080;
 class MountFS extends BasePortableFakeFS {
-  constructor({ baseFs = new NodeFS(), filter = null, magicByte = 42, maxOpenFiles = Infinity, useCache = true, maxAge = 5e3, getMountPoint, factoryPromise, factorySync }) {
+  constructor({ baseFs = new NodeFS(), filter = null, magicByte = 42, maxOpenFiles = Infinity, useCache = true, maxAge = 5e3, typeCheck = fs.constants.S_IFREG, getMountPoint, factoryPromise, factorySync }) {
     if (Math.floor(magicByte) !== magicByte || !(magicByte > 1 && magicByte <= 127))
       throw new Error(`The magic byte must be set to a round value between 1 and 127 included`);
     super();
@@ -8415,6 +8416,7 @@ class MountFS extends BasePortableFakeFS {
     this.magic = magicByte << 24;
     this.maxAge = maxAge;
     this.maxOpenFiles = maxOpenFiles;
+    this.typeCheck = typeCheck;
   }
   getExtractHint(hints) {
     return this.baseFs.getExtractHint(hints);
@@ -9113,7 +9115,7 @@ class MountFS extends BasePortableFakeFS {
         if (this.notMount.has(filePath))
           continue;
         try {
-          if (!this.baseFs.lstatSync(filePath).isFile()) {
+          if (this.typeCheck !== null && (this.baseFs.lstatSync(filePath).mode & fs.constants.S_IFMT) !== this.typeCheck) {
             this.notMount.add(filePath);
             continue;
           }

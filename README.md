@@ -1,4 +1,6 @@
-# build-tools
+<p>
+    <img width="100%" src="./assets/build-tools-cover.png">
+</p>
 
 Helpers for Vite & others for my other libraries.
 

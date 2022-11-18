@@ -28,6 +28,7 @@ dist-ssr
 
 # Vite cache + other build stuff
 .vite/
+.turbo/
 
 # Yarn Zero-Install setup
 node_modules

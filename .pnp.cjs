@@ -31,7 +31,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@changesets/changelog-github", "npm:0.4.7"],\
+          ["@changesets/changelog-github", "npm:0.4.8"],\
           ["@changesets/cli", "npm:2.25.2"],\
           ["@changesets/types", "npm:5.2.0"],\
           ["@types/node", "npm:18.11.9"],\
@@ -151,12 +151,12 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@changesets/changelog-github", [\
-      ["npm:0.4.7", {\
-        "packageLocation": "./.yarn/cache/@changesets-changelog-github-npm-0.4.7-31a8c6898f-11ecf1d130.zip/node_modules/@changesets/changelog-github/",\
+      ["npm:0.4.8", {\
+        "packageLocation": "./.yarn/cache/@changesets-changelog-github-npm-0.4.8-cc18274ceb-bee0fb283a.zip/node_modules/@changesets/changelog-github/",\
         "packageDependencies": [\
-          ["@changesets/changelog-github", "npm:0.4.7"],\
-          ["@changesets/get-github-info", "npm:0.5.1"],\
-          ["@changesets/types", "npm:5.2.0"],\
+          ["@changesets/changelog-github", "npm:0.4.8"],\
+          ["@changesets/get-github-info", "npm:0.5.2"],\
+          ["@changesets/types", "npm:5.2.1"],\
           ["dotenv", "npm:8.6.0"]\
         ],\
         "linkType": "HARD"\
@@ -245,12 +245,12 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@changesets/get-github-info", [\
-      ["npm:0.5.1", {\
-        "packageLocation": "./.yarn/cache/@changesets-get-github-info-npm-0.5.1-4a6b02031d-f9b2915272.zip/node_modules/@changesets/get-github-info/",\
+      ["npm:0.5.2", {\
+        "packageLocation": "./.yarn/cache/@changesets-get-github-info-npm-0.5.2-7f1c5b2a67-9ee546250a.zip/node_modules/@changesets/get-github-info/",\
         "packageDependencies": [\
-          ["@changesets/get-github-info", "npm:0.5.1"],\
+          ["@changesets/get-github-info", "npm:0.5.2"],\
           ["dataloader", "npm:1.4.0"],\
-          ["node-fetch", "virtual:4a6b02031d5bd05a1ff1e388c9905dadc8f9760edfc58b6f1cfb9ab80a73f64af15fb201fc6e23e0bca8e649986069dfb36853f1c0fc084f1371d7542df8ebce#npm:2.6.7"]\
+          ["node-fetch", "virtual:7f1c5b2a67fc16666aa31fba83ea7856ecb0e95595b13dccc7cae5cd164022bdf1a0a32cb6af01f93f4862b7b4f8dc76c7d04aff1bc0947186d7a6048d58d336#npm:2.6.7"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -359,6 +359,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@changesets-types-npm-5.2.0-625e6353de-0cca9cf8e8.zip/node_modules/@changesets/types/",\
         "packageDependencies": [\
           ["@changesets/types", "npm:5.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:5.2.1", {\
+        "packageLocation": "./.yarn/cache/@changesets-types-npm-5.2.1-d3a215a9d1-607af7c46f.zip/node_modules/@changesets/types/",\
+        "packageDependencies": [\
+          ["@changesets/types", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1233,7 +1240,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@workspace/root", "workspace:."],\
-          ["@changesets/changelog-github", "npm:0.4.7"],\
+          ["@changesets/changelog-github", "npm:0.4.8"],\
           ["@changesets/cli", "npm:2.25.2"],\
           ["@changesets/types", "npm:5.2.0"],\
           ["@types/node", "npm:18.11.9"],\
@@ -4679,10 +4686,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:4a6b02031d5bd05a1ff1e388c9905dadc8f9760edfc58b6f1cfb9ab80a73f64af15fb201fc6e23e0bca8e649986069dfb36853f1c0fc084f1371d7542df8ebce#npm:2.6.7", {\
-        "packageLocation": "./.yarn/__virtual__/node-fetch-virtual-725acafff2/0/cache/node-fetch-npm-2.6.7-777aa2a6df-05c03fe66f.zip/node_modules/node-fetch/",\
+      ["virtual:7f1c5b2a67fc16666aa31fba83ea7856ecb0e95595b13dccc7cae5cd164022bdf1a0a32cb6af01f93f4862b7b4f8dc76c7d04aff1bc0947186d7a6048d58d336#npm:2.6.7", {\
+        "packageLocation": "./.yarn/__virtual__/node-fetch-virtual-edd56d04d2/0/cache/node-fetch-npm-2.6.7-777aa2a6df-05c03fe66f.zip/node_modules/node-fetch/",\
         "packageDependencies": [\
-          ["node-fetch", "virtual:4a6b02031d5bd05a1ff1e388c9905dadc8f9760edfc58b6f1cfb9ab80a73f64af15fb201fc6e23e0bca8e649986069dfb36853f1c0fc084f1371d7542df8ebce#npm:2.6.7"],\
+          ["node-fetch", "virtual:7f1c5b2a67fc16666aa31fba83ea7856ecb0e95595b13dccc7cae5cd164022bdf1a0a32cb6af01f93f4862b7b4f8dc76c7d04aff1bc0947186d7a6048d58d336#npm:2.6.7"],\
           ["@types/encoding", null],\
           ["encoding", null],\
           ["whatwg-url", "npm:5.0.0"]\

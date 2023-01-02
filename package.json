@@ -26,7 +26,7 @@
         "@changesets/cli": "2.25.2",
         "@changesets/types": "5.2.0",
         "@types/node": "18.11.9",
-        "@typescript-eslint/eslint-plugin": "5.46.0",
+        "@typescript-eslint/eslint-plugin": "5.47.1",
         "@typescript-eslint/parser": "5.47.1",
         "@yarnpkg/pnpify": "4.0.0-rc.29",
         "eslint": "8.27.0",

@@ -28,7 +28,7 @@
         "@types/node": "18.11.9",
         "@typescript-eslint/eslint-plugin": "5.47.1",
         "@typescript-eslint/parser": "5.47.1",
-        "@yarnpkg/pnpify": "4.0.0-rc.29",
+        "@yarnpkg/pnpify": "4.0.0-rc.35",
         "eslint": "8.27.0",
         "eslint-config-prettier": "8.5.0",
         "eslint-plugin-simple-import-sort": "8.0.0",

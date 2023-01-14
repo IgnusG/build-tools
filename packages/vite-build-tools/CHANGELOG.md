@@ -1,5 +1,11 @@
 # @ignsg/vite-build-tools
 
+## 0.2.0
+
+### Minor Changes
+
+- [`68be371`](https://github.com/IgnusG/build-tools/commit/68be3713f282207141364c866dd806d9112a6725) Thanks [@IgnusG](https://github.com/IgnusG)! - Upgrade dependencies including rollup and vite@4
+
 ## 0.1.3
 
 ### Patch Changes

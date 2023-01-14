@@ -10,6 +10,7 @@ jobs:
   version:
     name: Version
     runs-on: ubuntu-latest
+    if: github.actor != 'dependabot[bot]' # https://github.com/dependabot/dependabot-core/issues/3253#issuecomment-797125425
     outputs:
       trigger-deploy: ${{ steps.changesets.outputs.hasChangesets == 'false' && steps.commit.outputs.result == 'true' }}
     strategy:

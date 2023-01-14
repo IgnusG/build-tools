@@ -82,7 +82,7 @@ function createMapFormatToOutputOptions({
 		return {
 			...outputConfig,
 			format,
-			interop: isEsModule && format === "cjs",
+			interop: isEsModule && format === "cjs" ? "compat" : "default",
 
 			entryFileNames: (chunkInfo) => {
 				const entry = entries.get(chunkInfo.name);

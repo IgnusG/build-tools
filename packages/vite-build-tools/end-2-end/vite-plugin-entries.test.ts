@@ -35,14 +35,14 @@ describe("vite-plugin-entries", () => {
 			plugins: [entriesPlugin(buildConfig)],
 		});
 
-		expect(readFile("fixtures/dist/index-ae38ff01.es.js")).toMatchSnapshot();
+		expect(readFile("fixtures/dist/index-06b5571c.es.js")).toMatchSnapshot();
 
 		expect(JSON.parse(readFile("fixtures/package.json"))).toEqual(
 			expect.objectContaining({
 				exports: {
 					"./index": {
-						import: "./dist/index-ae38ff01.es.js",
-						default: "./dist/index-ae38ff01.es.js",
+						import: "./dist/index-06b5571c.es.js",
+						default: "./dist/index-06b5571c.es.js",
 					},
 				},
 			}),
@@ -60,8 +60,8 @@ describe("vite-plugin-entries", () => {
 			plugins: [entriesPlugin(buildConfig)],
 		});
 
-		expect(readFile("fixtures/dist/index-ae38ff01.es.js")).toMatchSnapshot();
-		expect(readFile("fixtures/dist/cjs/index-251217db.cjs.js")).toMatchSnapshot();
+		expect(readFile("fixtures/dist/index-06b5571c.es.js")).toMatchSnapshot();
+		expect(readFile("fixtures/dist/cjs/index-6fade66e.cjs.js")).toMatchSnapshot();
 
 		expect(JSON.parse(readFile("fixtures/dist/cjs/package.json"))).toEqual(
 			expect.objectContaining({
@@ -73,9 +73,9 @@ describe("vite-plugin-entries", () => {
 			expect.objectContaining({
 				exports: {
 					"./index": {
-						import: "./dist/index-ae38ff01.es.js",
-						require: "./dist/cjs/index-251217db.cjs.js",
-						default: "./dist/index-ae38ff01.es.js",
+						import: "./dist/index-06b5571c.es.js",
+						require: "./dist/cjs/index-6fade66e.cjs.js",
+						default: "./dist/index-06b5571c.es.js",
 					},
 				},
 			}),
@@ -96,10 +96,10 @@ describe("vite-plugin-entries", () => {
 			plugins: [entriesPlugin(buildConfig)],
 		});
 
-		expect(readFile("fixtures/dist/index-ae38ff01.es.js")).toMatchSnapshot();
-		expect(readFile("fixtures/dist/other-06a48a94.es.js")).toMatchSnapshot();
-		expect(readFile("fixtures/dist/cjs/index-251217db.cjs.js")).toMatchSnapshot();
-		expect(readFile("fixtures/dist/cjs/other-6ce74051.cjs.js")).toMatchSnapshot();
+		expect(readFile("fixtures/dist/index-06b5571c.es.js")).toMatchSnapshot();
+		expect(readFile("fixtures/dist/other-ca5d566e.es.js")).toMatchSnapshot();
+		expect(readFile("fixtures/dist/cjs/index-6fade66e.cjs.js")).toMatchSnapshot();
+		expect(readFile("fixtures/dist/cjs/other-8548cf46.cjs.js")).toMatchSnapshot();
 
 		expect(JSON.parse(readFile("fixtures/dist/cjs/package.json"))).toEqual(
 			expect.objectContaining({
@@ -111,14 +111,14 @@ describe("vite-plugin-entries", () => {
 			expect.objectContaining({
 				exports: {
 					"./index": {
-						import: "./dist/index-ae38ff01.es.js",
-						require: "./dist/cjs/index-251217db.cjs.js",
-						default: "./dist/index-ae38ff01.es.js",
+						import: "./dist/index-06b5571c.es.js",
+						require: "./dist/cjs/index-6fade66e.cjs.js",
+						default: "./dist/index-06b5571c.es.js",
 					},
 					"./other": {
-						import: "./dist/other-06a48a94.es.js",
-						require: "./dist/cjs/other-6ce74051.cjs.js",
-						default: "./dist/other-06a48a94.es.js",
+						import: "./dist/other-ca5d566e.es.js",
+						require: "./dist/cjs/other-8548cf46.cjs.js",
+						default: "./dist/other-ca5d566e.es.js",
 					},
 				},
 			}),
@@ -141,8 +141,8 @@ describe("vite-plugin-entries", () => {
 
 		expect(JSON.parse(readFile("fixtures/package.json"))).toEqual(
 			expect.objectContaining({
-				module: "./dist/index-ae38ff01.es.js",
-				main: "./dist/cjs/index-251217db.cjs.js",
+				module: "./dist/index-06b5571c.es.js",
+				main: "./dist/cjs/index-6fade66e.cjs.js",
 			}),
 		);
 	});
@@ -167,21 +167,21 @@ describe("vite-plugin-entries", () => {
 			plugins: [entriesPlugin(buildConfig)],
 		});
 
-		expect(readFile("fixtures/dist/nestedFolder/helloWorld-c9343ade.es.js")).toMatchSnapshot();
-		expect(readFile("fixtures/dist/cjs/nestedFolder/helloWorld-97b1c535.cjs.js")).toMatchSnapshot();
+		expect(readFile("fixtures/dist/nestedFolder/helloWorld-06b5571c.es.js")).toMatchSnapshot();
+		expect(readFile("fixtures/dist/cjs/nestedFolder/helloWorld-6fade66e.cjs.js")).toMatchSnapshot();
 
 		expect(JSON.parse(readFile("fixtures/package.json"))).toEqual(
 			expect.objectContaining({
 				exports: {
 					"./nestedFolder/helloWorld": {
-						import: "./dist/nestedFolder/helloWorld-c9343ade.es.js",
-						require: "./dist/cjs/nestedFolder/helloWorld-97b1c535.cjs.js",
-						default: "./dist/nestedFolder/helloWorld-c9343ade.es.js",
+						import: "./dist/nestedFolder/helloWorld-06b5571c.es.js",
+						require: "./dist/cjs/nestedFolder/helloWorld-6fade66e.cjs.js",
+						default: "./dist/nestedFolder/helloWorld-06b5571c.es.js",
 					},
 					"./virtualFolder/bestGreeting": {
-						import: "./dist/other-06a48a94.es.js",
-						require: "./dist/cjs/other-6ce74051.cjs.js",
-						default: "./dist/other-06a48a94.es.js",
+						import: "./dist/other-ca5d566e.es.js",
+						require: "./dist/cjs/other-8548cf46.cjs.js",
+						default: "./dist/other-ca5d566e.es.js",
 					},
 				},
 			}),
@@ -208,11 +208,11 @@ describe("vite-plugin-entries", () => {
 			plugins: [entriesPlugin(buildConfig)],
 		});
 
-		expect(readFile("fixtures/dist/index-ae38ff01.es.js")).toMatchSnapshot();
-		expect(readFile("fixtures/dist/nested/index-752dcfd8.es.js")).toMatchSnapshot();
+		expect(readFile("fixtures/dist/index-06b5571c.es.js")).toMatchSnapshot();
+		expect(readFile("fixtures/dist/nested/index-c03f850b.es.js")).toMatchSnapshot();
 
-		expect(readFile("fixtures/dist/cjs/index-251217db.cjs.js")).toMatchSnapshot();
-		expect(readFile("fixtures/dist/cjs/nested/index-4fa5f886.cjs.js")).toMatchSnapshot();
+		expect(readFile("fixtures/dist/cjs/index-6fade66e.cjs.js")).toMatchSnapshot();
+		expect(readFile("fixtures/dist/cjs/nested/index-8dadecae.cjs.js")).toMatchSnapshot();
 	});
 
 	test.each(["main", "module", "exports"])(

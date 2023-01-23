@@ -34,7 +34,7 @@ const RAW_RUNTIME_STATE =
           ["@changesets/changelog-github", "npm:0.4.8"],\
           ["@changesets/cli", "npm:2.25.2"],\
           ["@changesets/types", "npm:5.2.1"],\
-          ["@types/node", "npm:18.11.9"],\
+          ["@types/node", "npm:18.11.18"],\
           ["@typescript-eslint/eslint-plugin", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:5.47.1"],\
           ["@typescript-eslint/parser", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:5.48.2"],\
           ["@yarnpkg/pnpify", "npm:4.0.0-rc.35"],\
@@ -1295,7 +1295,7 @@ const RAW_RUNTIME_STATE =
           ["@changesets/changelog-github", "npm:0.4.8"],\
           ["@changesets/cli", "npm:2.25.2"],\
           ["@changesets/types", "npm:5.2.1"],\
-          ["@types/node", "npm:18.11.9"],\
+          ["@types/node", "npm:18.11.18"],\
           ["@typescript-eslint/eslint-plugin", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:5.47.1"],\
           ["@typescript-eslint/parser", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:5.48.2"],\
           ["@yarnpkg/pnpify", "npm:4.0.0-rc.35"],\
@@ -6071,7 +6071,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.3"],\
-          ["@types/node", "npm:18.11.9"],\
+          ["@types/node", "npm:18.11.18"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\

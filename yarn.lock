@@ -1068,7 +1068,7 @@ __metadata:
     "@yarnpkg/pnpify": "npm:4.0.0-rc.37"
     eslint: "npm:8.27.0"
     eslint-config-prettier: "npm:8.6.0"
-    eslint-plugin-simple-import-sort: "npm:8.0.0"
+    eslint-plugin-simple-import-sort: "npm:10.0.0"
     eslint-plugin-unused-imports: "npm:2.0.0"
     lint-staged: "npm:13.1.0"
     prettier: "npm:2.8.3"
@@ -2257,12 +2257,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-simple-import-sort@npm:8.0.0":
-  version: 8.0.0
-  resolution: "eslint-plugin-simple-import-sort@npm:8.0.0"
+"eslint-plugin-simple-import-sort@npm:10.0.0":
+  version: 10.0.0
+  resolution: "eslint-plugin-simple-import-sort@npm:10.0.0"
   peerDependencies:
     eslint: ">=5.0.0"
-  checksum: 0b0e4f8aa74199d54df26a9fa1d95fc6f7570dcce8327865d6d80ea7ca2ccb06cecab66b48f6b50f8051038b6d866e9edd5ee7e136cbe717ffc1c64a4631b44d
+  checksum: c268ec580e15779ff4478f8b37afbbdc675e7029f7fecd001f503ce6e7f8b275dc9f553f045b54f2355cf73d7f157fd1926ab59c245f9d208a47ceed570ae88f
   languageName: node
   linkType: hard
 

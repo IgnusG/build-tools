@@ -34,7 +34,7 @@ const RAW_RUNTIME_STATE =
           ["@changesets/changelog-github", "npm:0.4.8"],\
           ["@changesets/cli", "npm:2.26.0"],\
           ["@changesets/types", "npm:5.2.1"],\
-          ["@types/node", "npm:18.11.18"],\
+          ["@types/node", "npm:18.13.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:5.49.0"],\
           ["@typescript-eslint/parser", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:5.50.0"],\
           ["@yarnpkg/pnpify", "npm:4.0.0-rc.37"],\
@@ -964,6 +964,13 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:18.11.9"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:18.13.0", {\
+        "packageLocation": "./.yarn/cache/@types-node-npm-18.13.0-00f732af8e-591b7b9a97.zip/node_modules/@types/node/",\
+        "packageDependencies": [\
+          ["@types/node", "npm:18.13.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@types/normalize-package-data", [\
@@ -1345,7 +1352,7 @@ const RAW_RUNTIME_STATE =
           ["@changesets/changelog-github", "npm:0.4.8"],\
           ["@changesets/cli", "npm:2.26.0"],\
           ["@changesets/types", "npm:5.2.1"],\
-          ["@types/node", "npm:18.11.18"],\
+          ["@types/node", "npm:18.13.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:5.49.0"],\
           ["@typescript-eslint/parser", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:5.50.0"],\
           ["@yarnpkg/pnpify", "npm:4.0.0-rc.37"],\
@@ -6173,7 +6180,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.3"],\
-          ["@types/node", "npm:18.11.18"],\
+          ["@types/node", "npm:18.13.0"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\

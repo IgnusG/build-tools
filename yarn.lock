@@ -784,10 +784,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.11.18, @types/node@npm:^18.11.11":
-  version: 18.11.18
-  resolution: "@types/node@npm:18.11.18"
-  checksum: bd39552701928d4a1613bc46adf8b65f8212064c2b5475a67161b6c4cef21ddb0a5c2ba062673213f8f5301ef6e171241a9e274a9b59c9fc1f5e2b69764740eb
+"@types/node@npm:18.14.0":
+  version: 18.14.0
+  resolution: "@types/node@npm:18.14.0"
+  checksum: d17dff07c712379d67af7750f1586b4840ade31ab814d04987aa25850f1d4ef29b63b9ed03a7a9dccee8c86106ca75ae3b6f8cdd17be3ef3f693e700b1ea437b
   languageName: node
   linkType: hard
 
@@ -795,6 +795,13 @@ __metadata:
   version: 12.20.55
   resolution: "@types/node@npm:12.20.55"
   checksum: 9b27dda0808201182f3b075fb38fff9cf5365fe906728a82d23257546ddb9899874f49606d495deb22e39338ddcb1bc381382b799181b3f1faf314c6ec8aa05f
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^18.11.11":
+  version: 18.11.18
+  resolution: "@types/node@npm:18.11.18"
+  checksum: bd39552701928d4a1613bc46adf8b65f8212064c2b5475a67161b6c4cef21ddb0a5c2ba062673213f8f5301ef6e171241a9e274a9b59c9fc1f5e2b69764740eb
   languageName: node
   linkType: hard
 
@@ -1065,7 +1072,7 @@ __metadata:
     "@changesets/changelog-github": "npm:0.4.8"
     "@changesets/cli": "npm:2.26.0"
     "@changesets/types": "npm:5.2.1"
-    "@types/node": "npm:18.11.18"
+    "@types/node": "npm:18.14.0"
     "@typescript-eslint/eslint-plugin": "npm:5.49.0"
     "@typescript-eslint/parser": "npm:5.50.0"
     "@yarnpkg/pnpify": "npm:4.0.0-rc.37"

@@ -41,7 +41,7 @@
     "devDependencies": {
         "@workspace/root": "workspace:*",
         "rollup": "3.17.3",
-        "vite": "4.0.4",
+        "vite": "4.1.4",
         "vitest": "0.29.1"
     }
 }

@@ -533,7 +533,7 @@ __metadata:
   resolution: "@ignsg/vite-build-tools@workspace:packages/vite-build-tools"
   dependencies:
     "@workspace/root": "workspace:*"
-    rollup: "npm:3.12.0"
+    rollup: "npm:3.17.3"
     vite: "npm:4.0.4"
     vitest: "npm:0.28.4"
   languageName: unknown
@@ -4739,9 +4739,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:3.12.0":
-  version: 3.12.0
-  resolution: "rollup@npm:3.12.0"
+"rollup@npm:3.17.3":
+  version: 3.17.3
+  resolution: "rollup@npm:3.17.3"
   dependencies:
     fsevents: "npm:~2.3.2"
   dependenciesMeta:
@@ -4749,7 +4749,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 41dfcd8fd28232ba3d6fa58e5694ec3eb47edb94073dab37dacd33c76adf1e53a6008c184e03b7f98a432805aef2487711261e42b8b88e56ebfe1b3bf8f89cd1
+  checksum: d11f66c0103bb495c46dbe06c0a005fbe4244270f536359d36b894f2d011422684dd2db09f1e973618e13a693f2dc572f4b4ac1025f269e0cdc3b57eb3521a9e
   languageName: node
   linkType: hard
 

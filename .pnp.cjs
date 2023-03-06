@@ -39,7 +39,7 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/parser", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:5.54.0"],\
           ["@yarnpkg/pnpify", "npm:4.0.0-rc.39"],\
           ["eslint", "npm:8.27.0"],\
-          ["eslint-config-prettier", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:8.6.0"],\
+          ["eslint-config-prettier", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:8.7.0"],\
           ["eslint-plugin-simple-import-sort", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:10.0.0"],\
           ["eslint-plugin-unused-imports", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:2.0.0"],\
           ["lint-staged", "npm:13.1.2"],\
@@ -1511,7 +1511,7 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/parser", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:5.54.0"],\
           ["@yarnpkg/pnpify", "npm:4.0.0-rc.39"],\
           ["eslint", "npm:8.27.0"],\
-          ["eslint-config-prettier", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:8.6.0"],\
+          ["eslint-config-prettier", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:8.7.0"],\
           ["eslint-plugin-simple-import-sort", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:10.0.0"],\
           ["eslint-plugin-unused-imports", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:2.0.0"],\
           ["lint-staged", "npm:13.1.2"],\
@@ -2887,17 +2887,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["eslint-config-prettier", [\
-      ["npm:8.6.0", {\
-        "packageLocation": "./.yarn/cache/eslint-config-prettier-npm-8.6.0-00192c9409-2aeb302e53.zip/node_modules/eslint-config-prettier/",\
+      ["npm:8.7.0", {\
+        "packageLocation": "./.yarn/cache/eslint-config-prettier-npm-8.7.0-9cfc221aac-43ac6ad81d.zip/node_modules/eslint-config-prettier/",\
         "packageDependencies": [\
-          ["eslint-config-prettier", "npm:8.6.0"]\
+          ["eslint-config-prettier", "npm:8.7.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:8.6.0", {\
-        "packageLocation": "./.yarn/__virtual__/eslint-config-prettier-virtual-c7f621fc44/0/cache/eslint-config-prettier-npm-8.6.0-00192c9409-2aeb302e53.zip/node_modules/eslint-config-prettier/",\
+      ["virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:8.7.0", {\
+        "packageLocation": "./.yarn/__virtual__/eslint-config-prettier-virtual-b3e234ae4a/0/cache/eslint-config-prettier-npm-8.7.0-9cfc221aac-43ac6ad81d.zip/node_modules/eslint-config-prettier/",\
         "packageDependencies": [\
-          ["eslint-config-prettier", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:8.6.0"],\
+          ["eslint-config-prettier", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:8.7.0"],\
           ["@types/eslint", null],\
           ["eslint", "npm:8.27.0"]\
         ],\

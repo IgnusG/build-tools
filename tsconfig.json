@@ -4,8 +4,8 @@
 
         "target": "ESNext",
 
-        "module": "NodeNext",
-        "moduleResolution": "NodeNext",
+        "module": "ESNext",
+        "moduleResolution": "bundler",
 
         "strict": true,
         "isolatedModules": true

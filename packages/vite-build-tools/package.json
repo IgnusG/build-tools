@@ -25,6 +25,9 @@
         "test": "vitest",
         "test:related": "vitest related --run"
     },
+    "imports": {
+        "#self/*": "./src/*.ts"
+    },
     "#exports": "Generated automatically by @ignsg/vite-build-tools",
     "exports": {
         "./vite-plugin-entries": {
@@ -39,6 +42,7 @@
         }
     },
     "devDependencies": {
+        "@ignsg/vite-build-tools": "latest",
         "@workspace/root": "workspace:*",
         "rollup": "3.19.1",
         "vite": "4.2.1",

@@ -1,9 +1,8 @@
 /// <reference types="vitest" />
 
+import dtsPlugin from "@ignsg/vite-build-tools/vite-plugin-dts";
+import entriesPlugin, { PluginOptions } from "@ignsg/vite-build-tools/vite-plugin-entries";
 import { defineConfig } from "vite";
-
-import dtsPlugin from "./src/vite-plugin-dts.js";
-import entriesPlugin, { PluginOptions } from "./src/vite-plugin-entries.js";
 
 const buildConfig: PluginOptions = {
 	formats: ["es"],

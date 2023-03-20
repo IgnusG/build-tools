@@ -3,7 +3,7 @@ import { cwd } from "node:process";
 
 import { ResolvedConfig, UserConfig } from "vite";
 
-import { Entry, EntryOptions, PluginOptions } from "./types.js";
+import { Entry, EntryOptions, PluginOptions } from "#self/types";
 
 export function getPackageJSONPath({ config }: { config: ResolvedConfig | UserConfig }) {
 	return path.join(config.root ?? cwd(), "package.json");

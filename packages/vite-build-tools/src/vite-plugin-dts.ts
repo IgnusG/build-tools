@@ -4,8 +4,8 @@ import { cwd } from "node:process";
 
 import { Plugin, ResolvedConfig } from "vite";
 
-import { Entry, PackageJsonExports, PluginOptions } from "./types.js";
-import { createReduceEntryOptionsToEntries, getPackageJSONPath } from "./utilities.js";
+import { Entry, PackageJsonExports, PluginOptions } from "#self/types";
+import { createReduceEntryOptionsToEntries, getPackageJSONPath } from "#self/utilities";
 
 export type { PluginOptions };
 

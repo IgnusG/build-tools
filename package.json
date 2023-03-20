@@ -44,5 +44,8 @@
         "ts-node@10.9.1": {
             "unplugged": true
         }
+    },
+    "resolutions": {
+        "vite": "4.2.1"
     }
 }

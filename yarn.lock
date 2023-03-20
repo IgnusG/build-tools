@@ -707,10 +707,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ignsg/vite-build-tools@npm:latest":
+  version: 0.2.0
+  resolution: "@ignsg/vite-build-tools@npm:0.2.0"
+  checksum: 23896a2a791ab38aeea56733984746df5d6c38303081b61adfa9b07d37ce1d28870dac4fb84b3d3884dc3ef6f361ff6844c83f5576fdf932f9bdf8e698593093
+  languageName: node
+  linkType: hard
+
 "@ignsg/vite-build-tools@workspace:packages/vite-build-tools":
   version: 0.0.0-use.local
   resolution: "@ignsg/vite-build-tools@workspace:packages/vite-build-tools"
   dependencies:
+    "@ignsg/vite-build-tools": "npm:latest"
     "@workspace/root": "workspace:*"
     rollup: "npm:3.19.1"
     vite: "npm:4.2.1"
@@ -5782,11 +5790,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A5.0.2#optional!builtin<compat/typescript>":
   version: 5.0.2
-  resolution: "typescript@patch:typescript@npm%3A5.0.2#optional!builtin<compat/typescript>::version=5.0.2&hash=ad5954"
+  resolution: "typescript@patch:typescript@npm%3A5.0.2#optional!builtin<compat/typescript>::version=5.0.2&hash=85af82"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 31dbad12f89374659895753700df361b121b35a789a956fc7d9a2f4f8fa0bf897bd289133a6989829d106d58a5f044b201b7fce0a26cf652e95299228e4268d7
+  checksum: 152c6851fd46cd63988ae112ede3b64aab3b10f9a33f5c8c5bab41af3bc0ec59dd265349da67890c80f1eba156a5beb0fb78ece94b40b3031c1eea3cece1e233
   languageName: node
   linkType: hard
 

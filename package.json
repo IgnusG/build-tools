@@ -16,7 +16,7 @@
         "change:version": "changeset version",
         "change:publish": "yarn each build && changeset publish"
     },
-    "packageManager": "yarn@4.0.0-rc.35",
+    "packageManager": "yarn@4.0.0-rc.40",
     "workspaces": [
         ".",
         "packages/*"

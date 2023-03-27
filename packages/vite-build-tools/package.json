@@ -46,6 +46,6 @@
         "@workspace/root": "workspace:*",
         "rollup": "3.19.1",
         "vite": "4.2.1",
-        "vitest": "0.29.5"
+        "vitest": "0.29.7"
     }
 }

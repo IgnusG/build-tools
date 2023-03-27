@@ -32,7 +32,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@changesets/changelog-github", "npm:0.4.8"],\
-          ["@changesets/cli", "npm:2.26.0"],\
+          ["@changesets/cli", "npm:2.26.1"],\
           ["@changesets/types", "npm:5.2.1"],\
           ["@types/node", "npm:18.15.3"],\
           ["@typescript-eslint/eslint-plugin", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:5.55.0"],\
@@ -171,10 +171,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@changesets/cli", [\
-      ["npm:2.26.0", {\
-        "packageLocation": "./.yarn/cache/@changesets-cli-npm-2.26.0-49d5c5f72d-ef5cedc3ff.zip/node_modules/@changesets/cli/",\
+      ["npm:2.26.1", {\
+        "packageLocation": "./.yarn/cache/@changesets-cli-npm-2.26.1-9a2caa44ee-e31e63a3fe.zip/node_modules/@changesets/cli/",\
         "packageDependencies": [\
-          ["@changesets/cli", "npm:2.26.0"],\
+          ["@changesets/cli", "npm:2.26.1"],\
           ["@babel/runtime", "npm:7.20.13"],\
           ["@changesets/apply-release-plan", "npm:6.1.3"],\
           ["@changesets/assemble-release-plan", "npm:5.2.3"],\
@@ -1357,7 +1357,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@workspace/root", "workspace:."],\
           ["@changesets/changelog-github", "npm:0.4.8"],\
-          ["@changesets/cli", "npm:2.26.0"],\
+          ["@changesets/cli", "npm:2.26.1"],\
           ["@changesets/types", "npm:5.2.1"],\
           ["@types/node", "npm:18.15.3"],\
           ["@typescript-eslint/eslint-plugin", "virtual:145d4b875e7c4073d9e252e94e0090174ed9a8766627246febbae1fca00546b174389c8076ec2c439aa1df6e697d35375242e7c8fc38d7ef7c7c7c5b1876b9f4#npm:5.55.0"],\

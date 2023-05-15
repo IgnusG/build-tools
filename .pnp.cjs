@@ -705,7 +705,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@ignsg/vite-build-tools", "npm:0.2.0"],\
           ["@workspace/root", "workspace:."],\
-          ["rollup", "npm:3.19.1"],\
+          ["rollup", "npm:3.21.7"],\
           ["vite", "virtual:858f98265912d12d562c9fb8980dd7ac5611bf74b6bda66b4fcc3c3a89e24ef5da989adf71cdad405f96835f2818206c68be0a3a4227e45aebdeeb10d938b71b#npm:4.2.1"],\
           ["vitest", "virtual:858f98265912d12d562c9fb8980dd7ac5611bf74b6bda66b4fcc3c3a89e24ef5da989adf71cdad405f96835f2818206c68be0a3a4227e45aebdeeb10d938b71b#npm:0.29.5"]\
         ],\
@@ -5438,18 +5438,18 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["rollup", [\
-      ["npm:3.19.1", {\
-        "packageLocation": "./.yarn/cache/rollup-npm-3.19.1-f25bd0d605-b99434f7e2.zip/node_modules/rollup/",\
-        "packageDependencies": [\
-          ["rollup", "npm:3.19.1"],\
-          ["fsevents", "patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:3.20.0", {\
         "packageLocation": "./.yarn/cache/rollup-npm-3.20.0-54d44f8613-d3b95bbd4d.zip/node_modules/rollup/",\
         "packageDependencies": [\
           ["rollup", "npm:3.20.0"],\
+          ["fsevents", "patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:3.21.7", {\
+        "packageLocation": "./.yarn/cache/rollup-npm-3.21.7-cd827f6ddd-cfc759aa4a.zip/node_modules/rollup/",\
+        "packageDependencies": [\
+          ["rollup", "npm:3.21.7"],\
           ["fsevents", "patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"]\
         ],\
         "linkType": "HARD"\

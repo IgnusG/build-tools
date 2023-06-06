@@ -567,7 +567,7 @@ __metadata:
     "@ignsg/vite-build-tools": "npm:latest"
     "@workspace/root": "workspace:*"
     rollup: "npm:3.19.1"
-    vite: "npm:4.2.1"
+    vite: "npm:4.2.3"
     vitest: "npm:0.29.5"
   languageName: unknown
   linkType: soft

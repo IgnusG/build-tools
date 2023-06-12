@@ -44,7 +44,7 @@
     "devDependencies": {
         "@ignsg/vite-build-tools": "latest",
         "@workspace/root": "workspace:*",
-        "rollup": "3.19.1",
+        "rollup": "3.25.1",
         "vite": "4.2.1",
         "vitest": "0.29.5"
     }

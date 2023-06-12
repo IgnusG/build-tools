@@ -45,7 +45,7 @@
         "@ignsg/vite-build-tools": "latest",
         "@workspace/root": "workspace:*",
         "rollup": "3.19.1",
-        "vite": "4.2.1",
+        "vite": "4.3.9",
         "vitest": "0.29.5"
     }
 }
